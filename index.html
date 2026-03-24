@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dillingh &amp; Van Bronkhorst - Politiek-Strategisch Adviseurs</title>
+  <meta name="description" content="Dillingh &amp; Van Bronkhorst - Politiek-strategisch adviseurs. Trainingen en advies voor progressieve politici.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #1a3a3a;
+      --teal-deep: #0f2626;
+      --teal-light: #254d4d;
+      --cream: #f5f0e8;
+      --gold: #c4a35a;
+      --gold-muted: #a08642;
+      --white: #ffffff;
+      --text-light: rgba(255,255,255,0.85);
+      --text-muted: rgba(255,255,255,0.6);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--teal-deep);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .serif {
+      font-family: 'Cormorant Garamond', 'Georgia', serif;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: var(--teal);
+      padding: 3rem 2rem;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: linear-gradient(to bottom, transparent, var(--teal-deep));
+    }
+
+    .crest {
+      width: 260px;
+      max-width: 50vw;
+      margin-bottom: 2.5rem;
+      filter: brightness(1.1);
+      background: transparent;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .tagline {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: clamp(0.75rem, 1.5vw, 1rem);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── INTRO / ANDERE TIJDEN ── */
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .intro-image {
+      width: 100%;
+      border-radius: 2px;
+    }
+
+    .intro h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 600;
+      line-height: 1.25;
+      margin-bottom: 1.5rem;
+    }
+
+    .intro p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    /* ── DIENSTEN ── */
+    .diensten {
+      padding-top: 4rem;
+    }
+
+    .diensten h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    .diensten-list {
+      list-style: none;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .diensten-list li {
+      font-size: 1rem;
+      color: var(--text-light);
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .diensten-list li::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 0.5em;
+    }
+
+    .winnen-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      font-weight: 600;
+      font-style: italic;
+      color: var(--gold);
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(196,163,90,0.3);
+    }
+
+    /* ── THEORY-PRACTICE BRIDGE ── */
+    .bridge {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .bridge-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .bridge-visual .bridge-word {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 0.05em;
+      color: var(--white);
+    }
+
+    .bridge-arrows-svg {
+      width: 120px;
+      height: 80px;
+    }
+
+    /* ── METHODE / HOE WEER TE WINNEN ── */
+    .methode {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .methode h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .methode p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .narrative-diagram {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+      background: rgba(255,255,255,0.03);
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .narrative-svg {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+    }
+
+    .methode-questions {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ── TARIEVEN ── */
+    .tarieven-section {
+      background: var(--teal);
+      border-radius: 4px;
+      padding: 3rem;
+      margin-top: 2rem;
+    }
+
+    .tarieven-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    .tarief-item {
+      padding: 1.2rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .tarief-item:last-of-type {
+      border-bottom: none;
+    }
+
+    .tarief-naam {
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .tarief-prijs {
+      color: var(--gold);
+      font-size: 0.9rem;
+    }
+
+    .tarief-prijs span {
+      display: inline-block;
+      margin-right: 1.5rem;
+    }
+
+    .btw-note {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      margin-top: 1.5rem;
+      font-style: italic;
+    }
+
+    /* ── TEAM ── */
+    .team {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .team-member {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .team-photo {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border-radius: 2px;
+      margin-bottom: 1.5rem;
+    }
+
+    .team-member h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    .team-member p {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+
+    /* ── CONTACT ── */
+    .contact {
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+
+    .contact h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .contact a {
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      border-bottom: 1px solid rgba(196,163,90,0.3);
+      padding-bottom: 2px;
+      transition: border-color 0.3s;
+    }
+
+    .contact a:hover {
+      border-color: var(--gold);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .intro,
+      .methode,
+      .team {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .intro-image {
+        order: -1;
+      }
+
+      section {
+        padding: 3rem 1.5rem;
+      }
+
+      .crest {
+        width: 180px;
+      }
+
+      .tarieven-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .narrative-diagram {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="images/crest.png" alt="Dillingh &amp; Van Bronkhorst wapen" class="crest">
+    <h1 class="serif">Dillingh &amp; Van Bronkhorst</h1>
+    <p class="tagline">Politiek-Strategisch Adviseurs</p>
+  </section>
+
+  <!-- ANDERE TIJDEN -->
+  <section>
+    <div class="intro">
+      <div>
+        <p class="section-label">Over ons</p>
+        <h2 class="serif">Andere tijden vereisen andere politici</h2>
+        <p>De politieke tijden zijn veranderd. Extreemrechts is in opkomst. De ene crisis volgt de andere op, en het internationaal recht blijkt optioneel. Tegelijkertijd lijken veel ambtsdragers de noblesse oblige voorbij: principes worden verkwanseld en de leugen regeert. Nieuwe partijen komen op, sterven dan weer uit, en verdrijven traditionele machtsblokken. Traditionele media lijken meer ge&iuml;nteresseerd in clicks en likes dan informeren, en sociale media zijn nu h&eacute;t gedoodverfde communicatiemiddel voor politici.</p>
+      </div>
+      <img src="images/duo-portrait.png" alt="Savri&euml;l Dillingh en Marthe van Bronkhorst" class="intro-image">
+    </div>
+  </section>
+
+  <!-- DIENSTEN -->
+  <section class="diensten">
+    <p class="section-label">Nieuwe politiek voor progressieve politici</p>
+    <h2 class="serif">Wat wij bieden</h2>
+    <ul class="diensten-list">
+      <li>Het kapen en beheersen van het politieke debat</li>
+      <li>Het inzetten en domineren van media</li>
+      <li>(Beeld)taal en communicatie die aanspreekt</li>
+      <li>Inzicht in populisme, radicalisatie en andere politieke processen</li>
+      <li>Kennis van actiebewegingen en flanken</li>
+      <li>Het moderniseren van campagnes</li>
+      <li>Een heldere langetermijnvisie</li>
+    </ul>
+    <p class="winnen-quote">Er blijkt ruimte voor een progressief geluid dat weer gaat winnen</p>
+  </section>
+
+  <!-- THEORY / PRACTICE -->
+  <section>
+    <div class="bridge">
+      <div class="bridge-visual">
+        <span class="bridge-word">Theory</span>
+        <svg class="bridge-arrows-svg" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Top arrow: curves right (Theory -> Practice) -->
+          <path d="M10,28 C35,8 85,8 110,28" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M104,20 L110,28 L102,32" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Bottom arrow: curves left (Practice -> Theory) -->
+          <path d="M110,52 C85,72 35,72 10,52" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M16,60 L10,52 L18,48" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="bridge-word">Practice</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHODE -->
+  <section>
+    <div class="methode">
+      <div>
+        <p class="section-label">Onze methode</p>
+        <h2 class="serif">Hoe weer te winnen</h2>
+        <p>De trainingen van Dillingh &amp; van Bronkhorst combineren cognitief-psychologische inzichten met een politiek-economische fundering. Zij bieden daarmee iets wat andere politieke communicatietrainingen niet bieden: een integrale theory of change.</p>
+        <p>Zo geven Dillingh &amp; van Bronkhorst progressieve politici de tools om zich te verhouden tot de huidige politieke situatie, maar ook een langetermijnstrategie om hun idealen te doen winnen.</p>
+        <p class="methode-questions">Wat is de taak van progressieve politici in deze tijden? Wat zijn de nieuwe gereedschappen? Wat zijn de nieuwe handelsperspectieven?</p>
+      </div>
+      <div class="narrative-diagram">
+        <svg class="narrative-svg" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Head silhouette -->
+          <path d="M160,25 C130,25 108,40 105,65 C103,80 105,90 112,100 C115,105 115,112 113,118 L113,135 C113,140 117,145 125,147 L140,150 L160,155 L180,150 L195,147 C203,145 207,140 207,135 L207,118 C205,112 205,105 208,100 C215,90 217,80 215,65 C212,40 190,25 160,25 Z" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" fill="none"/>
+          <!-- Brain squiggle inside head -->
+          <path d="M135,55 C140,48 150,45 158,50 C165,45 175,48 178,55 C183,52 188,58 185,65 C190,68 188,76 182,78 C185,83 180,88 174,86 C170,90 162,90 158,86 C152,90 144,88 142,83 C136,85 132,78 135,73 C130,70 132,62 135,55 Z" stroke="rgba(255,255,255,0.35)" stroke-width="1" fill="none"/>
+          <!-- Left arrow: Narrative entering head -->
+          <line x1="30" y1="75" x2="100" y2="75" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <path d="M93,68 L103,75 L93,82" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Right arrow: Myth exiting head (angled upward) -->
+          <line x1="220" y1="75" x2="290" y2="58" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round"/>
+          <path d="M283,50 L292,56 L284,64" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Narrative label (left, italic) -->
+          <text x="30" y="100" font-family="Cormorant Garamond, Georgia, serif" font-size="20" font-style="italic" fill="#c4a35a" letter-spacing="1">Narrative</text>
+          <!-- Myth label (right, crossed out with explicit line) -->
+          <text x="248" y="48" font-family="Cormorant Garamond, Georgia, serif" font-size="20" font-style="italic" fill="rgba(255,255,255,0.35)" letter-spacing="1">Myth</text>
+          <line x1="245" y1="43" x2="295" y2="43" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARIEVEN -->
+  <section>
+    <div class="tarieven-section">
+      <h2 class="serif">Tarieven</h2>
+      <div class="tarief-item">
+        <p class="tarief-naam">Groepstraining voor fracties</p>
+        <p class="tarief-prijs"><span>&euro;700,- per dagdeel</span> <span>&euro;1250,- hele dag</span></p>
+      </div>
+      <div class="tarief-item">
+        <p class="tarief-naam">Individuele training voor politici</p>
+        <p class="tarief-prijs">&euro;950,- per dagdeel</p>
+      </div>
+      <div class="tarief-item">
+        <p class="tarief-naam">Externe communicatieaudit</p>
+        <p class="tarief-prijs">&euro;1800,- per rapport</p>
+      </div>
+      <p class="btw-note">Alle prijzen zijn exclusief btw</p>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section>
+    <p class="section-label">Het team</p>
+    <div class="team">
+      <div class="team-member">
+        <img src="images/savriel.png" alt="Savri&euml;l Dillingh" class="team-photo">
+        <h3 class="serif">Savri&euml;l Dillingh</h3>
+        <p>Savri&euml;l Dillingh is social media expert en politiek filosoof. Hij was jarenlang politiek adviseur voor BIJ1-fractieleider Sylvana Simons. Savri&euml;l richtte het wetenschappelijk bureau van BIJ1 op en schreef de partijprogramma&rsquo;s van meerdere lokale partijen, naast die van BIJ1. In 2026 promoveerde hij op een proefschrift over de politieke economie van het neoliberalisme.</p>
+      </div>
+      <div class="team-member">
+        <img src="images/marthe.png" alt="Marthe van Bronkhorst" class="team-photo">
+        <h3 class="serif">Marthe van Bronkhorst</h3>
+        <p>Marthe van Bronkhorst is schrijver en neuropsycholoog. Zij maakte media voor de NPO en platform Radio Kookpunt en publiceerde in diverse kranten en tijdschriften, zowel journalistiek als wetenschappelijk. Met haar werk in de zorg staat zij midden in de maatschappij en zij heeft een breed netwerk in politieke en maatschappelijke bewegingen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2 class="serif">Interesse of een vraag?</h2>
+    <a href="mailto:info@dillinghvanbronkhorst.nl">info@dillinghvanbronkhorst.nl</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Dillingh &amp; Van Bronkhorst</p>
+  </footer>
+
+</body>
+</html>
